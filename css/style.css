@@ -32,6 +32,9 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+}
 .container {
   max-width: 1360px;
   margin: 0 auto;
@@ -39,7 +42,6 @@ p {
 .page-header {
   position: absolute;
   width: 100%;
-
 }
 .page-header .container {
   padding-left: 28px;
@@ -77,13 +79,15 @@ p {
   padding-top: 280px;
   padding-bottom: 282px;
   text-align: center;
-  background-image: linear-gradient(to bottom,
-  rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url(../images/hero-bg.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
 }
 
 .page-title {
@@ -116,7 +120,43 @@ p {
   align-items: center;
   justify-content: center;
   gap: 4px;
-
 }
-
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  display: none;
+}
+.form-section .container {
+  display: flex;
+}
+.form-title-text {
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+  margin-bottom: 32px;
+  color: #333;
+}
+.form-image {
+  width: 670px;
+}
+.form-wrapper {
+  padding: 80px 50px 80px 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form-input {
+  margin-bottom: 32px;
+}
+.email-input {
+  margin-bottom: 60px;
+}
